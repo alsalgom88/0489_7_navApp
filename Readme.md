@@ -35,7 +35,6 @@ Les captures estan dins la carpeta `img/` del projecte:
 ![Options Menu – Detall](img/Captura5.png)
 ![Tabbed Navigation](img/Captura6.png)
 
-
 ---
 
 ## 🧱 Estructura general del projecte
@@ -100,6 +99,7 @@ app/
 * Afegir **animacions de transició** entre fragments.
 * Internacionalitzar tota la UI amb **strings multillenguatge**.
 * Utilitzar **temes Light/Dark**, colors i estils reutilitzables.
+
 
 ---
 
@@ -505,5 +505,138 @@ Amb aquesta activitat l’alumnat:
 * Futures pràctiques ABP (apps reals).
 * Integrar dades (API/BD) sobre aquesta mateixa estructura de navegació.
 * Migrar posteriorment a **Jetpack Compose** mantenint la lògica de navegació.
+
+---
+
+---
+
+# 🔧 🔄 AMPLIACIÓ DE LA PRÀCTICA
+
+## Integració dels 4 sistemes de navegació en UNA sola Activity
+
+> **IMPORTANT:**
+> Aquesta ampliació **NO substitueix** la pràctica original.
+> **NO s’ha d’eliminar ni modificar cap fitxer existent.**
+> Les activitats actuals (`DrawerActivity`, `BottomActivity`, `OptionsActivity`, `TabbedActivity`) serveixen com a **referència funcional**.
+
+---
+
+## 🎯 Objectiu de l’ampliació
+
+Crear **una única Activity** que integri simultàniament:
+
+1. 🧭 Navigation Drawer
+2. 📌 Bottom Navigation
+3. ☰ Options Menu
+4. 🗂 Tabbed Navigation
+
+Tot utilitzant:
+
+* **una sola Toolbar**
+* **un sol NavHostFragment**
+* **un únic NavController**
+
+Aquest és el model d’arquitectura utilitzat en **apps Android professionals modernes**.
+
+---
+
+## 🧱 Enfocament arquitectònic
+
+L’alumnat ha de crear una nova activitat, per exemple:
+
+```
+UnifiedNavigationActivity.kt
+```
+
+amb el seu layout:
+
+```
+activity_unified_navigation.xml
+```
+
+Aquesta Activity actuarà com a **contenidor global** de navegació, reutilitzant:
+
+* fragments ja existents
+* menús XML ja creats
+* animacions existents
+* recursos de strings i temes
+
+---
+
+## 🧩 Layout unificat
+
+El layout ha de combinar **components ja utilitzats** al projecte:
+
+* `DrawerLayout`
+* `CoordinatorLayout`
+* `AppBarLayout` + `Toolbar`
+* `FragmentContainerView` (NavHostFragment)
+* `BottomNavigationView`
+* `NavigationView`
+
+No s’introdueixen components nous, només es **reorganitzen** dins una sola Activity.
+
+---
+
+## 🧠 Gestió del NavController
+
+A la nova Activity:
+
+* S’obté **un únic NavController**
+* Es defineixen tots els fragments principals com a **top-level destinations**
+* El `DrawerLayout` es passa a l’`AppBarConfiguration`
+
+Això permet una navegació coherent entre tots els sistemes.
+
+---
+
+## ☰ Options Menu integrat
+
+L’Options Menu deixa de dependre d’una Activity pròpia i passa a formar part de la mateixa Activity unificada mitjançant:
+
+* `onCreateOptionsMenu()`
+* `onOptionsItemSelected()`
+* navegació amb `NavController.navigate()`
+
+---
+
+## 📌 Convivència Drawer + Bottom Navigation
+
+Ambdós menús es connecten al **mateix NavController** mitjançant `NavigationUI`, assegurant que:
+
+* els `id` dels menús coincideixin amb els fragments del graph
+* no hi hagi conflictes de navegació
+
+---
+
+## 🗂 Pestanyes dins el sistema unificat
+
+La navegació per pestanyes:
+
+* es manté amb `ViewPager2` + `FragmentStateAdapter`
+* s’integra com una secció més del NavGraph
+* gestiona la navegació interna sense NavController
+
+---
+
+## 📍 Graph de navegació unificat
+
+Es recomana crear un nou `navigation graph` que:
+
+* referenciï fragments existents
+* no dupliqui codi
+* centralitzi tota la navegació de l’app
+
+---
+
+## ✅ Criteris de validació de l’ampliació
+
+L’ampliació es considera correcta si:
+
+✔️ Hi ha **una sola Activity funcional**
+✔️ Conviuen els **4 sistemes de navegació**
+✔️ Hi ha **un únic NavController**
+✔️ Es reutilitza codi existent
+✔️ No s’ha eliminat res de la pràctica original
 
 ---
