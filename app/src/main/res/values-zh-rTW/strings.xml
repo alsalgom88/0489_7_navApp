@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 應用程式名稱 -->
+    <string name="app_name">NavApp</string>
+
+    <!-- 活動 -->
+    <string name="title_main_activity">主選單導航</string>
+    <string name="title_drawer_activity">側邊選單</string>
+    <string name="title_bottom_activity">底部導航</string>
+    <string name="title_options_activity">選項選單</string>
+    <string name="title_tabbed_activity">分頁</string>
+
+    <!-- 按鈕 -->
+    <string name="btn_go_drawer">開啟側邊選單</string>
+    <string name="btn_go_bottom">開啟底部導航</string>
+    <string name="btn_go_options">開啟選項選單</string>
+    <string name="btn_go_tabs">開啟分頁</string>
+
+    <!-- 抽屜選單 -->
+    <string name="drawer_item_1">側邊選單 1</string>
+    <string name="drawer_item_2">側邊選單 2</string>
+    <string name="drawer_item_3">側邊選單 3</string>
+
+    <!-- 底部導航 -->
+    <string name="bottom_item_home">首頁</string>
+    <string name="bottom_item_gallery">相簿</string>
+    <string name="bottom_item_profile">個人資料</string>
+
+    <!-- 選項選單 -->
+    <string name="menu_settings">設定</string>
+    <string name="menu_help">說明</string>
+    <string name="menu_about">關於</string>
+
+    <!-- 分頁 / 片段 -->
+    <string name="fragment_drawer_1_title">側邊選單區域 1</string>
+    <string name="fragment_drawer_2_title">側邊選單區域 2</string>
+    <string name="fragment_drawer_3_title">側邊選單區域 3</string>
+
+    <string name="fragment_bottom_1_title">首頁</string>
+    <string name="fragment_bottom_2_title">相簿</string>
+    <string name="fragment_bottom_3_title">個人資料</string>
+
+    <string name="fragment_tab_1_title">分頁 1 — 首頁</string>
+    <string name="fragment_tab_2_title">分頁 2 — 清單</string>
+    <string name="fragment_tab_3_title">分頁 3 — 個人資料</string>
+
+    <!-- 文本 -->
+    <string name="hello_blank_fragment">你好！這是一個空白片段。</string>
+    <string name="loading">載入中…</string>
+    <string name="coming_soon">即將推出</string>
+    <string name="not_available">不可用</string>
+
+    <!-- 無障礙 -->
+    <string name="cd_open_drawer">開啟導航選單</string>
+    <string name="cd_close_drawer">關閉導航選單</string>
+
+</resources>

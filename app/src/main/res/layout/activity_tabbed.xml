@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Layout de TabbedActivity.
+    Combina:
+      ✔ Toolbar (AppBarLayout)
+      ✔ TabLayout (pestanyes)
+      ✔ ViewPager2 (navegació lateral entre fragments)
+
+    CoordinatorLayout permet integrar:
+      → comportament del AppBarLayout
+      → transicions suaus amb el contingut
+-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!-- ========================================================= -->
+    <!-- 🟦 BARRA SUPERIOR — AppBarLayout + Toolbar                 -->
+    <!-- ========================================================= -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--
+            Toolbar utilitzada com ActionBar a TabbedActivity.
+            – Mostra títol
+            – Gestiona navegació amb NavController (si cal)
+        -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="Pestanyes" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <!-- ========================================================= -->
+    <!-- 🟩 CONTINGUT PRINCIPAL — TabLayout + ViewPager2            -->
+    <!-- ========================================================= -->
+
+    <!--
+        LinearLayout vertical perquè TabLayout estigui a dalt
+        i ViewPager2 ocupi la resta de la pantalla.
+    -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--
+            TabLayout:
+              – Mostra les diferents pestanyes
+              – Es sincronitza amb el ViewPager2 via TabLayoutMediator
+              – Color d’indicador i textos personalitzats
+        -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/purple_500"
+            app:tabSelectedTextColor="@color/purple_700"
+            app:tabTextColor="@color/black" />
+
+        <!--
+            ViewPager2:
+              – Gestiona el pas entre fragments amb lliscament lateral
+              – android:layout_weight="1" fa que ocupi tot l’espai restant
+        -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

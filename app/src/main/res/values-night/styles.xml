@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ========================================================= -->
+    <!--  🌙 THEME OSCUR PER DEFECTE                               -->
+    <!-- ========================================================= -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+
+        <!-- Colors foscos -->
+        <item name="colorPrimary">@color/md_theme_dark_primary</item>
+        <item name="colorPrimaryDark">@color/md_theme_dark_onPrimary</item>
+        <item name="colorAccent">@color/md_theme_dark_secondary</item>
+
+        <item name="android:colorBackground">@color/md_theme_dark_background</item>
+        <item name="android:textColor">@color/md_theme_dark_onBackground</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Toolbar en mode fosc -->
+    <style name="AppTheme.Toolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/md_theme_dark_onPrimary</item>
+        <item name="android:background">@color/md_theme_dark_primary</item>
+    </style>
+
+</resources>

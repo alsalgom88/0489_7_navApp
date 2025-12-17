@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ========================================================= -->
+    <!-- 🏷️ NOM DE L'APLICACIÓ                                     -->
+    <!-- ========================================================= -->
+    <string name="app_name">NavApp</string>
+
+
+    <!-- ========================================================= -->
+    <!-- 🧭 ACTIVITATS PRINCIPALS                                 -->
+    <!-- ========================================================= -->
+    <string name="title_main_activity">Navegació principal</string>
+    <string name="title_drawer_activity">Menú lateral</string>
+    <string name="title_bottom_activity">Navegació inferior</string>
+    <string name="title_options_activity">Menú d\'opcions</string>
+    <string name="title_tabbed_activity">Pestanyes</string>
+
+
+    <!-- ========================================================= -->
+    <!-- 🟦 BOTONS PER OBRIR ACTIVITATS                           -->
+    <!-- ========================================================= -->
+    <string name="btn_go_drawer">Obrir Drawer</string>
+    <string name="btn_go_bottom">Obrir Bottom Navigation</string>
+    <string name="btn_go_options">Obrir Menú d\'Opcions</string>
+    <string name="btn_go_tabs">Obrir Pestanyes</string>
+
+
+    <!-- ========================================================= -->
+    <!-- 🗂️ DRAWER MENU ITEMS                                      -->
+    <!-- ========================================================= -->
+    <string name="drawer_item_1">Opció Drawer 1</string>
+    <string name="drawer_item_2">Opció Drawer 2</string>
+    <string name="drawer_item_3">Opció Drawer 3</string>
+
+
+    <!-- ========================================================= -->
+    <!-- 📱 BOTTOM NAVIGATION ITEMS                                -->
+    <!-- ========================================================= -->
+    <string name="bottom_item_home">Inici</string>
+    <string name="bottom_item_gallery">Galeria</string>
+    <string name="bottom_item_profile">Perfil</string>
+
+
+    <!-- ========================================================= -->
+    <!-- ⚙️ MENÚ D'OPCIONS (OVERFLOW)                              -->
+    <!-- ========================================================= -->
+    <string name="menu_settings">Configuració</string>
+    <string name="menu_help">Ajuda</string>
+    <string name="menu_about">Quant a</string>
+
+
+    <!-- ========================================================= -->
+    <!-- 📄 FRAGMENTS (TÍTOLS I TEXT)                              -->
+    <!-- ========================================================= -->
+    <string name="fragment_drawer_1_title">Secció Drawer 1</string>
+    <string name="fragment_drawer_2_title">Secció Drawer 2</string>
+    <string name="fragment_drawer_3_title">Secció Drawer 3</string>
+
+    <string name="fragment_bottom_1_title">Inici</string>
+    <string name="fragment_bottom_2_title">Galeria</string>
+    <string name="fragment_bottom_3_title">Perfil</string>
+
+    <string name="fragment_tab_1_title">Pestanya 1 — Inici</string>
+    <string name="fragment_tab_2_title">Pestanya 2 — Llista</string>
+    <string name="fragment_tab_3_title">Pestanya 3 — Perfil</string>
+
+
+    <!-- ========================================================= -->
+    <!-- 📝 TEXTOS GENERALS                                         -->
+    <!-- ========================================================= -->
+    <string name="hello_blank_fragment">Hola! Aquest és un fragment buit.</string>
+    <string name="loading">Carregant…</string>
+    <string name="coming_soon">Disponible aviat</string>
+    <string name="not_available">No disponible</string>
+
+
+    <!-- ========================================================= -->
+    <!-- ♿ ACCESSIBILITAT                                           -->
+    <!-- ========================================================= -->
+    <string name="cd_open_drawer">Obrir menú lateral</string>
+    <string name="cd_close_drawer">Tancar menú lateral</string>
+
+</resources>

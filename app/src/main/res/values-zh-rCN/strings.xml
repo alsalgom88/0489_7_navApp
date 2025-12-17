@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 应用名称 -->
+    <string name="app_name">NavApp</string>
+
+    <!-- 活动 -->
+    <string name="title_main_activity">主导航</string>
+    <string name="title_drawer_activity">侧边菜单</string>
+    <string name="title_bottom_activity">底部导航</string>
+    <string name="title_options_activity">选项菜单</string>
+    <string name="title_tabbed_activity">标签页</string>
+
+    <!-- 按钮 -->
+    <string name="btn_go_drawer">打开侧边菜单</string>
+    <string name="btn_go_bottom">打开底部导航</string>
+    <string name="btn_go_options">打开选项菜单</string>
+    <string name="btn_go_tabs">打开标签页</string>
+
+    <!-- 抽屉菜单 -->
+    <string name="drawer_item_1">侧边菜单 1</string>
+    <string name="drawer_item_2">侧边菜单 2</string>
+    <string name="drawer_item_3">侧边菜单 3</string>
+
+    <!-- 底部导航 -->
+    <string name="bottom_item_home">首页</string>
+    <string name="bottom_item_gallery">图库</string>
+    <string name="bottom_item_profile">个人资料</string>
+
+    <!-- 选项菜单 -->
+    <string name="menu_settings">设置</string>
+    <string name="menu_help">帮助</string>
+    <string name="menu_about">关于</string>
+
+    <!-- 片段 -->
+    <string name="fragment_drawer_1_title">侧边菜单区域 1</string>
+    <string name="fragment_drawer_2_title">侧边菜单区域 2</string>
+    <string name="fragment_drawer_3_title">侧边菜单区域 3</string>
+
+    <string name="fragment_bottom_1_title">首页</string>
+    <string name="fragment_bottom_2_title">图库</string>
+    <string name="fragment_bottom_3_title">个人资料</string>
+
+    <string name="fragment_tab_1_title">标签 1 — 首页</string>
+    <string name="fragment_tab_2_title">标签 2 — 列表</string>
+    <string name="fragment_tab_3_title">标签 3 — 个人资料</string>
+
+    <!-- 文本 -->
+    <string name="hello_blank_fragment">你好！这是一个空白片段。</string>
+    <string name="loading">加载中…</string>
+    <string name="coming_soon">即将推出</string>
+    <string name="not_available">不可用</string>
+
+    <!-- 辅助功能 -->
+    <string name="cd_open_drawer">打开导航菜单</string>
+    <string name="cd_close_drawer">关闭导航菜单</string>
+
+</resources>

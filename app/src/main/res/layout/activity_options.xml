@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Layout principal per a OptionsActivity.
+    Utilitza CoordinatorLayout per integrar:
+      ✔ Toolbar dins AppBarLayout
+      ✔ Fragments gestionats per Navigation Component
+      ✔ Comportament correcte amb scroll i MaterialDesign
+-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ========================================================= -->
+    <!-- 🟦 APPBAR (Toolbar dins AppBarLayout)                     -->
+    <!-- ========================================================= -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--
+            Toolbar moderna utilitzada com ActionBar.
+            → Es sincronitza amb Navigation Component.
+            → Gestiona el botó enrere i el menú superior (overflow).
+            → app:title = títol inicial de l'Activity.
+        -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Opcions" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <!-- ========================================================= -->
+    <!-- 🟩 NAVHOST (contenidor de fragments)                       -->
+    <!-- ========================================================= -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_options"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:navGraph="@navigation/options_graph"
+        app:defaultNavHost="true" />
+    <!--
+        android:name="androidx.navigation.fragment.NavHostFragment"
+            → indica que aquest contenidor gestiona navegació.
+
+        navGraph="@navigation/options_graph"
+            → estableix quin gràfic de navegació utilitzar.
+
+        defaultNavHost="true"
+            → permet que el botó físic ENRERE funcioni correctament.
+
+        layout_behavior="@string/appbar_scrolling_view_behavior"
+            → permet que el fragment es mogui sota/debajo de la Toolbar
+              i respecti els comportaments Material Design.
+    -->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

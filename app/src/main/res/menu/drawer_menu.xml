@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Fitxer de menú per al Navigation Drawer (NavigationView).
+    Cada <item> representa una opció del menú lateral.
+    Quan l’usuari prem un item, NavigationUI navegarà
+    automàticament al fragment associat.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        PRIMER ÍTEM DEL DRAWER
+        - id → ha de coincidir amb un fragment definit al navigation graph
+        - title → text que es mostra a la llista del menú lateral
+        - icon → icona representativa (aquí icones del sistema)
+    -->
+    <item
+        android:id="@+id/drawer1Fragment"
+        android:title="@string/drawer_item_1"
+        android:icon="@android:drawable/ic_menu_view" />
+
+
+    <!--
+        SEGON ÍTEM DEL DRAWER
+        Quan l’usuari el selecciona, el NavController anirà a drawer2Fragment.
+    -->
+    <item
+        android:id="@+id/drawer2Fragment"
+        android:title="@string/drawer_item_2"
+        android:icon="@android:drawable/ic_menu_gallery" />
+
+
+    <!--
+        TERCER ÍTEM DEL DRAWER
+        El fragment associat és drawer3Fragment.
+        ic_menu_manage → icona d’ajustos del sistema.
+    -->
+    <item
+        android:id="@+id/drawer3Fragment"
+        android:title="@string/drawer_item_3"
+        android:icon="@android:drawable/ic_menu_manage" />
+
+</menu>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Layout principal de BottomActivity.
+    CoordinatorLayout permet:
+      ✔ Integrar AppBarLayout + Toolbar
+      ✔ Gestió correcta de scroll i comportaments Material
+      ✔ Posicionar el BottomNavigationView
+-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+        AppBarLayout conté elements de la barra superior,
+        com la Toolbar. Forma part de Material Design.
+    -->
+    <!-- ========================================================= -->
+    <!-- 🟦 BARRA SUPERIOR (Toolbar dins AppBarLayout)             -->
+    <!-- ========================================================= -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--
+            Toolbar moderna que actua com a ActionBar.
+            - Controlada des del codi mitjançant setSupportActionBar()
+            - Gestiona icones, títols, botó enrere i Overflow
+            - colorPrimary ve del tema (Theme.NavApp)
+        -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!--
+        FragmentContainerView:
+        - Conté els fragments gestionats pel NavController.
+        - És el "cos" principal de la pantalla.
+        - Carrega bottom_graph.xml (Navigation Graph).
+        - defaultNavHost="true": gestiona automàticament el botó enrere.
+    -->
+    <!-- ========================================================= -->
+    <!-- 🟩 NAVHOST → Mostra els fragments de Bottom Navigation     -->
+    <!-- ========================================================= -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/bottom_nav_host"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/bottom_graph" />
+    <!--
+        defaultNavHost="true"
+            → controla el botó físic d’enrere
+        navGraph="@navigation/bottom_graph"
+            → defineix quins fragments formen part del menú inferior
+    -->
+
+
+    <!--
+        BottomNavigationView:
+        - Menú inferior de navegació (Material Design).
+        - app:menu → assigna el menú amb els 3 ítems.
+        - layout_gravity="bottom": el col·loca enganxat a sota.
+        - colorSurface = color adequat segons tema (Day/Night).
+    -->
+    <!-- ========================================================= -->
+    <!-- 🟥 BOTTOM NAVIGATION VIEW (menú inferior Material)         -->
+    <!-- ========================================================= -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="?attr/colorSurface"
+        app:menu="@menu/bottom_menu" />
+    <!--
+        menu="@menu/bottom_menu"
+            → assigna les opcions: Home, Galeria, Perfil
+        colorSurface
+            → adapta el color segons mode Light/Dark
+        layout_gravity="bottom"
+            → el fixa a la part inferior del CoordinatorLayout
+    -->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

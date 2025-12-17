@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Fitxer de menú utilitzat pel BottomNavigationView.
+    Cada <item> defineix una pestanya/acció de la barra inferior.
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Primer element del BottomNavigationView.
+        - id → coincideix amb un fragment del Navigation Graph
+        - title → text que es mostra sota la icona
+        - icon → icona del sistema
+    -->
+    <item
+        android:id="@+id/bottom1Fragment"
+        android:title="@string/bottom_item_home"
+        android:icon="@android:drawable/ic_menu_view" />
+
+
+    <!--
+        Segon element.
+        Aquest item navegarà cap al fragment bottom2Fragment
+        quan l’usuari premi “Galeria”.
+    -->
+    <item
+        android:id="@+id/bottom2Fragment"
+        android:title="@string/bottom_item_gallery"
+        android:icon="@android:drawable/ic_menu_gallery" />
+
+
+    <!--
+        Tercer element.
+        “Perfil” obre el fragment bottom3Fragment.
+        ic_menu_manage → icona del sistema amb forma d’ajustos.
+    -->
+    <item
+        android:id="@+id/bottom3Fragment"
+        android:title="@string/bottom_item_profile"
+        android:icon="@android:drawable/ic_menu_manage" />
+
+</menu>

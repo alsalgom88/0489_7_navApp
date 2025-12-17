@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ========================================================= -->
+    <!-- 📏 PADDINGS (espai intern)                               -->
+    <!-- ========================================================= -->
+
+    <!-- Padding gran — útil per pantalles principals -->
+    <dimen name="padding_large">24dp</dimen>
+
+    <!-- Padding mitjà — valor estàndard Material Design -->
+    <dimen name="padding_medium">16dp</dimen>
+
+    <!-- Padding petit — útil per components compactes -->
+    <dimen name="padding_small">8dp</dimen>
+
+    <!-- Padding extra petit — separacions molt fines -->
+    <dimen name="padding_xsmall">4dp</dimen>
+
+
+    <!-- ========================================================= -->
+    <!-- 📐 MARGES (espai extern)                                 -->
+    <!-- ========================================================= -->
+
+    <!-- Marge universal gran per contenidors -->
+    <dimen name="margin_large">24dp</dimen>
+
+    <!-- Marge universal mitjà (recomanat) -->
+    <dimen name="margin_medium">16dp</dimen>
+
+    <!-- Marge petit per separació entre elements -->
+    <dimen name="margin_small">8dp</dimen>
+
+
+    <!-- ========================================================= -->
+    <!-- 🔤 TEXT (mides típiques segons Material Design 3)          -->
+    <!-- ========================================================= -->
+
+    <!-- Títols grans (pantalles principals) -->
+    <dimen name="text_title_large">24sp</dimen>
+
+    <!-- Títols normals -->
+    <dimen name="text_title">20sp</dimen>
+
+    <!-- Text de paràgraf -->
+    <dimen name="text_body">16sp</dimen>
+
+    <!-- Text secundari / peu de pàgina -->
+    <dimen name="text_small">14sp</dimen>
+
+
+    <!-- ========================================================= -->
+    <!-- 🟦 BOTONS I CONTROL D’ALÇADA                               -->
+    <!-- ========================================================= -->
+
+    <!-- Alçada mínima per a Material Buttons -->
+    <dimen name="button_height">48dp</dimen>
+
+    <!-- Amplada màxima per evitar botons gegants -->
+    <dimen name="button_max_width">320dp</dimen>
+
+    <!-- Separació vertical entre botons -->
+    <dimen name="button_spacing_vertical">12dp</dimen>
+
+
+    <!-- ========================================================= -->
+    <!-- 🎛 ICONES                                                  -->
+    <!-- ========================================================= -->
+
+    <!-- Icones normals -->
+    <dimen name="icon_size">24dp</dimen>
+
+    <!-- Icones grans (toolbar, drawers…) -->
+    <dimen name="icon_large">32dp</dimen>
+
+
+    <!-- ========================================================= -->
+    <!-- 🧱 ALTRES DIMENSIONS COMUNS                                -->
+    <!-- ========================================================= -->
+
+    <!-- Alçada típica d'una Toolbar -->
+    <dimen name="toolbar_height">56dp</dimen>
+
+    <!-- Radi d’arrodoniment per targetes/containers -->
+    <dimen name="corner_radius">12dp</dimen>
+
+</resources>

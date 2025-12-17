@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App-Name -->
+    <string name="app_name">NavApp</string>
+
+    <!-- Aktivitäten -->
+    <string name="title_main_activity">Hauptnavigation</string>
+    <string name="title_drawer_activity">Navigationsmenü</string>
+    <string name="title_bottom_activity">Untere Navigation</string>
+    <string name="title_options_activity">Optionenmenü</string>
+    <string name="title_tabbed_activity">Tabs</string>
+
+    <!-- Buttons -->
+    <string name="btn_go_drawer">Drawer öffnen</string>
+    <string name="btn_go_bottom">Bottom Navigation öffnen</string>
+    <string name="btn_go_options">Optionenmenü öffnen</string>
+    <string name="btn_go_tabs">Tabs öffnen</string>
+
+    <!-- Drawer-Elemente -->
+    <string name="drawer_item_1">Drawer Option 1</string>
+    <string name="drawer_item_2">Drawer Option 2</string>
+    <string name="drawer_item_3">Drawer Option 3</string>
+
+    <!-- Bottom Navigation -->
+    <string name="bottom_item_home">Startseite</string>
+    <string name="bottom_item_gallery">Galerie</string>
+    <string name="bottom_item_profile">Profil</string>
+
+    <!-- Options Menü -->
+    <string name="menu_settings">Einstellungen</string>
+    <string name="menu_help">Hilfe</string>
+    <string name="menu_about">Über</string>
+
+    <!-- Fragmente -->
+    <string name="fragment_drawer_1_title">Drawer Bereich 1</string>
+    <string name="fragment_drawer_2_title">Drawer Bereich 2</string>
+    <string name="fragment_drawer_3_title">Drawer Bereich 3</string>
+
+    <string name="fragment_bottom_1_title">Startseite</string>
+    <string name="fragment_bottom_2_title">Galerie</string>
+    <string name="fragment_bottom_3_title">Profil</string>
+
+    <string name="fragment_tab_1_title">Tab 1 — Startseite</string>
+    <string name="fragment_tab_2_title">Tab 2 — Liste</string>
+    <string name="fragment_tab_3_title">Tab 3 — Profil</string>
+
+    <!-- Texte -->
+    <string name="hello_blank_fragment">Hallo! Dies ist ein leeres Fragment.</string>
+    <string name="loading">Laden…</string>
+    <string name="coming_soon">Bald verfügbar</string>
+    <string name="not_available">Nicht verfügbar</string>
+
+    <!-- Barrierefreiheit -->
+    <string name="cd_open_drawer">Navigationsmenü öffnen</string>
+    <string name="cd_close_drawer">Navigationsmenü schließen</string>
+
+</resources>

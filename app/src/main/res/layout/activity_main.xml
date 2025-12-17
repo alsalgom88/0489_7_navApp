@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Layout principal de la MainActivity de la NavApp.
+    Es fa servir CoordinatorLayout perquè permet coordinar:
+    - la Toolbar dins de AppBarLayout
+    - el contingut amb comportaments de Material Design
+-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!-- ========================================================= -->
+    <!-- 1) APPBARLAYOUT + TOOLBAR (barra superior)                 -->
+    <!-- ========================================================= -->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.Toolbar">
+
+        <!--
+            Toolbar moderna que substitueix l’ActionBar.
+            - S’integra amb Navigation Component
+            - Gestiona títols i icones
+            - Accepta menús (overflow)
+        -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <!-- ========================================================= -->
+    <!-- 2) COS PRINCIPAL DE LA PANTALLA (ConstraintLayout)         -->
+    <!-- ========================================================= -->
+
+    <!--
+        Aquest ConstraintLayout conté quatre botons centrats
+        que obren cadascun un sistema de navegació diferent:
+        - Drawer Navigation
+        - Bottom Navigation
+        - Options Menu Navigation
+        - Tabbed Navigation (ViewPager2 + Tabs)
+    -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_large">
+
+
+        <!-- 🟦 BOTÓ 1 — Drawer Navigation -->
+        <Button
+            android:id="@+id/action_goto_drawerActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_go_drawer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/action_goto_bottomActivity" />
+
+
+        <!-- 🟩 BOTÓ 2 — Bottom Navigation -->
+        <Button
+            android:id="@+id/action_goto_bottomActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_go_bottom"
+            app:layout_constraintTop_toBottomOf="@id/action_goto_drawerActivity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/action_goto_optionsActivity" />
+
+
+        <!-- 🟧 BOTÓ 3 — Options Menu Navigation -->
+        <Button
+            android:id="@+id/action_goto_optionsActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_go_options"
+            app:layout_constraintTop_toBottomOf="@id/action_goto_bottomActivity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/action_goto_tabbedActivity" />
+
+
+        <!-- 🟪 BOTÓ 4 — Tabbed Navigation -->
+        <Button
+            android:id="@+id/action_goto_tabbedActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_go_tabs"
+            app:layout_constraintTop_toBottomOf="@id/action_goto_optionsActivity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

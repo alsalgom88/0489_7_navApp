@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    HEADER DEL NAVIGATION DRAWER
+
+    Aquest layout es mostra a la part superior
+    del menú lateral (NavigationView → app:headerLayout).
+
+    Conté:
+      ✔ Una imatge (logo)
+      ✔ Un text de benvinguda
+
+    S’ha definit un disseny simple i centrat
+    per aconseguir un header net i clar.
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="#009688">
+    <!--
+        match_parent → ocupa tot l’ample del Drawer
+        altura fixa → 160dp = mida típica d’un header
+        gravity="center" → centra tots els elements verticalment
+        padding → separació interior
+        background → color del header (#009688 = teal)
+    -->
+
+
+    <!-- ========================================================= -->
+    <!-- 🖼️ LOGO / ICONA PRINCIPAL                                   -->
+    <!-- ========================================================= -->
+    <ImageView
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_width="72dp"
+        android:layout_height="72dp"/>
+    <!--
+        src → icona oficial de l’app (pot canviar-se pel logo real)
+        72dp → mida recomanada per a headers de NavigationView
+    -->
+
+
+    <!-- ========================================================= -->
+    <!-- 📝 TEXT DE BENVINGUDA                                      -->
+    <!-- ========================================================= -->
+    <TextView
+        android:text="Benvingut!"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <!--
+        text → títol o salutació a l’usuari
+        textColor → blanc per contrastar amb el fons verd
+        textSize → 18sp: mida còmoda per llegir
+        marginTop → separació respecte a la icona
+    -->
+
+</LinearLayout>

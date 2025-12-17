@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Fitxer XML que defineix el menú superior (Options Menu)
+    de l'Activity OptionsActivity.
+    Aquest menú apareix a la Toolbar com a overflow (tres punts ⋮).
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <!-- ========================================================= -->
+    <!-- 1) OPCIÓ: CONFIGURACIÓ                                   -->
+    <!-- ========================================================= -->
+    <item
+        android:id="@+id/menu_settings"
+        android:title="@string/menu_settings"
+        android:icon="@android:drawable/ic_menu_manage"
+        app:showAsAction="never" />
+    <!--
+        id          → identificador per detectar clics a onOptionsItemSelected()
+        title       → text que apareix dins del menú
+        icon        → icona del sistema (habitual per proves)
+        showAsAction="never"
+                     → NO mostrar a la Toolbar, només dins del menú desplegable
+    -->
+
+
+    <!-- ========================================================= -->
+    <!-- 2) OPCIÓ: AJUDA                                           -->
+    <!-- ========================================================= -->
+    <item
+        android:id="@+id/menu_help"
+        android:title="@string/menu_help"
+        android:icon="@android:drawable/ic_menu_help"
+        app:showAsAction="never" />
+    <!--
+        Aquesta opció obre el fragment help (options3Fragment)
+        quan es prem, gràcies a la lògica d’OptionsActivity.kt.
+    -->
+
+
+    <!-- ========================================================= -->
+    <!-- 3) OPCIÓ: QUANT A                                         -->
+    <!-- ========================================================= -->
+    <item
+        android:id="@+id/menu_about"
+        android:title="@string/menu_about"
+        android:icon="@android:drawable/ic_menu_info_details"
+        app:showAsAction="never" />
+    <!--
+        Opció habitual per mostrar informació de l'app.
+        També navega a un fragment concret definit al navigation graph.
+    -->
+
+</menu>

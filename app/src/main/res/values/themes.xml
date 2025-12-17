@@ -1,0 +1,72 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        ===============================
+        TEMA BASE DE L’APLICACIÓ
+        ===============================
+
+        Base.Theme.NavApp:
+        - És el tema principal del projecte NavApp.
+        - Hereta de Theme.Material3.DayNight.NoActionBar.
+
+        QUÈ SIGNIFICA EL PARENT?
+
+        Theme.Material3.DayNight.NoActionBar:
+        ✔ Implementa Material Design 3 (M3)
+        ✔ Mode clar i mode fosc automàtic (DayNight)
+        ✔ No incorpora l’ActionBar per defecte
+           → perquè nosaltres farem servir Toolbar personalitzades.
+
+        Aquest estil base és el punt d’entrada on es podrien definir:
+        - colors personalitzats
+        - tipografies
+        - formes (shape appearance)
+        - estils comuns per tota l’app
+    -->
+    <style name="Base.Theme.NavApp" parent="Theme.Material3.Light.NoActionBar">
+
+        <!-- COLORS PRINCIPALS -->
+        <item name="colorPrimary">@color/md_theme_light_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
+
+        <item name="colorSecondary">@color/md_theme_light_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_light_onSecondary</item>
+
+        <item name="android:colorBackground">@color/md_theme_light_background</item>
+        <item name="colorOnBackground">@color/md_theme_light_onBackground</item>
+
+        <item name="colorSurface">@color/md_theme_light_surface</item>
+        <item name="colorOnSurface">@color/md_theme_light_onSurface</item>
+
+        <!-- STATUS BAR I NAVIGATION BAR -->
+        <item name="android:statusBarColor">@color/md_theme_light_primary</item>
+        <item name="android:navigationBarColor">@color/md_theme_light_surface</item>
+
+        <!-- ICONES (toolbar / status bar) fosques per fons clar -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+    </style>
+
+
+    <!--
+        ===============================
+        TEMA PRINCIPAL DE L’APP
+        ===============================
+
+        Theme.NavApp:
+        - És el tema que s’aplica realment a l’aplicació al AndroidManifest.xml.
+        - Hereta directament del Base.Theme.NavApp
+
+        Per què es crea un tema base + un tema final?
+
+        Bones pràctiques d’Android Studio:
+        ✔ Base -> per definir els estils comuns
+        ✔ Tema final -> per a personalitzacions específiques si cal
+
+        Si més endavant vols tenir un tema clar i un tema fosc separats,
+        aquesta estructura facilita molt la gestió.
+    -->
+    <style name="Theme.NavApp" parent="Base.Theme.NavApp" />
+
+</resources>

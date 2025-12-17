@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        ===============================================================
+        🎨 AppTheme — Tema principal de l'aplicació
+        ===============================================================
+
+        Aquest tema hereta de:
+        → Theme.AppCompat.Light.DarkActionBar
+
+        QUÈ APORTA AQUEST TEMA?
+        ✔ Mode clar per defecte
+        ✔ Tipus d'estil “AppCompat” compatible amb versions antigues
+        ✔ Inclou una ActionBar fosca (DarkActionBar)… però la DESACTIVEM
+
+        PER QUÈ DESACTIVEM L'ACTIONBAR?
+
+        Perquè volem utilitzar una:
+        ✔ Toolbar personalitzada
+        ✔ O bé un layout XML amb capçalera pròpia
+
+        Això dona més control sobre:
+        – Colors
+        – Icones
+        – Navegació
+        – Branding (logotip o títol personalitzat)
+    -->
+    <!-- ========================================================= -->
+    <!--  🎨 THEME PRINCIPAL (MODE CLAR)                           -->
+    <!-- ========================================================= -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- 💡 Colors principals del tema -->
+        <item name="colorPrimary">@color/md_theme_light_primary</item>
+        <item name="colorPrimaryDark">@color/md_theme_light_onPrimary</item>
+        <item name="colorAccent">@color/md_theme_light_secondary</item>
+
+        <!-- 🎨 Colors de superfícies -->
+        <item name="android:colorBackground">@color/md_theme_light_background</item>
+        <item name="android:textColor">@color/md_theme_light_onBackground</item>
+
+        <!-- ✔ Eliminem l’ActionBar perquè farem servir Toolbar XML -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- ⚙ Suport Day/Night si el sistema ho requereix -->
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+
+    <!-- ========================================================= -->
+    <!--  🎨 THEME PER A TOOLBARS                                  -->
+    <!-- ========================================================= -->
+    <style name="AppTheme.Toolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:background">@color/md_theme_light_primary</item>
+    </style>
+
+
+    <!-- ========================================================= -->
+    <!--  🟦 TEMES PER ACTIVITATS ESPECÍFIQUES                     -->
+    <!-- ========================================================= -->
+
+    <!-- DrawerActivity -->
+    <style name="Theme.Drawer" parent="AppTheme">
+        <item name="colorPrimary">@color/blue_accent</item>
+        <item name="colorAccent">@color/teal_200</item>
+    </style>
+
+    <!-- BottomActivity -->
+    <style name="Theme.BottomNav" parent="AppTheme">
+        <item name="colorPrimary">@color/orange_accent</item>
+        <item name="colorAccent">@color/md_theme_light_secondary</item>
+    </style>
+
+    <!-- OptionsActivity -->
+    <style name="Theme.Options" parent="AppTheme">
+        <item name="colorPrimary">@color/md_theme_light_tertiary</item>
+        <item name="colorAccent">@color/pink_accent</item>
+    </style>
+
+    <!-- TabsActivity -->
+    <style name="Theme.Tabs" parent="AppTheme">
+        <item name="colorPrimary">@color/purple_700</item>
+        <item name="colorAccent">@color/purple_500</item>
+    </style>
+
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ========================================================= -->
+    <!-- 🏷️ NOMBRE DE LA APLICACIÓN                                -->
+    <!-- ========================================================= -->
+    <string name="app_name">NavApp</string>
+
+
+    <!-- ========================================================= -->
+    <!-- 🧭 ACTIVIDADES PRINCIPALES                                -->
+    <!-- ========================================================= -->
+    <string name="title_main_activity">Navegación principal</string>
+    <string name="title_drawer_activity">Menú lateral</string>
+    <string name="title_bottom_activity">Navegación inferior</string>
+    <string name="title_options_activity">Menú de opciones</string>
+    <string name="title_tabbed_activity">Pestañas</string>
+
+
+    <!-- ========================================================= -->
+    <!-- 🟦 BOTONES PARA ABRIR ACTIVIDADES                         -->
+    <!-- ========================================================= -->
+    <string name="btn_go_drawer">Abrir Drawer</string>
+    <string name="btn_go_bottom">Abrir Bottom Navigation</string>
+    <string name="btn_go_options">Abrir Menú de Opciones</string>
+    <string name="btn_go_tabs">Abrir Pestañas</string>
+
+
+    <!-- ========================================================= -->
+    <!-- 🗂️ DRAWER MENU ITEMS                                      -->
+    <!-- ========================================================= -->
+    <string name="drawer_item_1">Opción Drawer 1</string>
+    <string name="drawer_item_2">Opción Drawer 2</string>
+    <string name="drawer_item_3">Opción Drawer 3</string>
+
+
+    <!-- ========================================================= -->
+    <!-- 📱 BOTTOM NAVIGATION ITEMS                                -->
+    <!-- ========================================================= -->
+    <string name="bottom_item_home">Inicio</string>
+    <string name="bottom_item_gallery">Galería</string>
+    <string name="bottom_item_profile">Perfil</string>
+
+
+    <!-- ========================================================= -->
+    <!-- ⚙️ MENÚ DE OPCIONES (OVERFLOW)                             -->
+    <!-- ========================================================= -->
+    <string name="menu_settings">Configuración</string>
+    <string name="menu_help">Ayuda</string>
+    <string name="menu_about">Acerca de</string>
+
+
+    <!-- ========================================================= -->
+    <!-- 📄 FRAGMENTOS (TÍTULOS Y TEXTOS)                           -->
+    <!-- ========================================================= -->
+    <string name="fragment_drawer_1_title">Sección Drawer 1</string>
+    <string name="fragment_drawer_2_title">Sección Drawer 2</string>
+    <string name="fragment_drawer_3_title">Sección Drawer 3</string>
+
+    <string name="fragment_bottom_1_title">Inicio</string>
+    <string name="fragment_bottom_2_title">Galería</string>
+    <string name="fragment_bottom_3_title">Perfil</string>
+
+    <string name="fragment_tab_1_title">Pestaña 1 — Inicio</string>
+    <string name="fragment_tab_2_title">Pestaña 2 — Lista</string>
+    <string name="fragment_tab_3_title">Pestaña 3 — Perfil</string>
+
+
+    <!-- ========================================================= -->
+    <!-- 📝 TEXTOS GENERALES                                       -->
+    <!-- ========================================================= -->
+    <string name="hello_blank_fragment">Hola! Este es un fragmento vacío.</string>
+    <string name="loading">Cargando…</string>
+    <string name="coming_soon">Disponible pronto</string>
+    <string name="not_available">No disponible</string>
+
+
+    <!-- ========================================================= -->
+    <!-- ♿ ACCESIBILIDAD                                            -->
+    <!-- ========================================================= -->
+    <string name="cd_open_drawer">Abrir menú lateral</string>
+    <string name="cd_close_drawer">Cerrar menú lateral</string>
+
+</resources>

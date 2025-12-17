@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_graph"
+    app:startDestination="@id/bottom1Fragment">
+
+    <!-- ========================================================= -->
+    <!-- FRAGMENT 1 (Home)                                        -->
+    <!-- ========================================================= -->
+    <fragment
+        android:id="@+id/bottom1Fragment"
+        android:name="com.example.navapp.Bottom1Fragment"
+        android:label="fragment_bottom1"
+        tools:layout="@layout/fragment_bottom1">
+
+        <!-- 1 → 2 -->
+        <action
+            android:id="@+id/action_bottom1_to_bottom2"
+            app:destination="@id/bottom2Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- 1 → 3 -->
+        <action
+            android:id="@+id/action_bottom1_to_bottom3"
+            app:destination="@id/bottom3Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+
+    <!-- ========================================================= -->
+    <!-- FRAGMENT 2 (Galeria)                                     -->
+    <!-- ========================================================= -->
+    <fragment
+        android:id="@+id/bottom2Fragment"
+        android:name="com.example.navapp.Bottom2Fragment"
+        android:label="fragment_bottom2"
+        tools:layout="@layout/fragment_bottom2">
+
+        <!-- 2 → 1 -->
+        <action
+            android:id="@+id/action_bottom2_to_bottom1"
+            app:destination="@id/bottom1Fragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+        <!-- 2 → 3 -->
+        <action
+            android:id="@+id/action_bottom2_to_bottom3"
+            app:destination="@id/bottom3Fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+
+    <!-- ========================================================= -->
+    <!-- FRAGMENT 3 (Perfil)                                      -->
+    <!-- ========================================================= -->
+    <fragment
+        android:id="@+id/bottom3Fragment"
+        android:name="com.example.navapp.Bottom3Fragment"
+        android:label="fragment_bottom3"
+        tools:layout="@layout/fragment_bottom3">
+
+        <!-- 3 → 1 -->
+        <action
+            android:id="@+id/action_bottom3_to_bottom1"
+            app:destination="@id/bottom1Fragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+        <!-- 3 → 2 -->
+        <action
+            android:id="@+id/action_bottom3_to_bottom2"
+            app:destination="@id/bottom2Fragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+    </fragment>
+
+</navigation>

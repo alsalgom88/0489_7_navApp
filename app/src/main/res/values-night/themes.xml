@@ -1,0 +1,63 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        ============================================
+        TEMA BASE PER AL MODE FOSC (NIGHT MODE)
+        ============================================
+
+        Aquest arxiu defineix les personalitzacions visuals que
+        només s’aplicaran quan el dispositiu estigui en:
+        ✔ Mode fosc seleccionat manualment
+        ✔ Mode automàtic (DayNight) durant la nit
+
+        És la contrapartida fosca del fitxer:
+        → res/values/themes.xml
+        El sistema Android canvia automàticament entre tots dos.
+    -->
+    -->
+    <style name="Base.Theme.NavApp" parent="Theme.Material3.Dark.NoActionBar">
+        <!--
+                    Aquest és el mateix tema base que a la versió de dia,
+                    però aquí podem adaptar colors específics per a la nit.
+
+                    Exemple (comentat):
+
+                    <item name="colorPrimary">@color/my_dark_primary</item>
+                    <item name="colorOnPrimary">@color/white</item>
+                    <item name="android:statusBarColor">@color/my_dark_primary</item>
+
+                    Per què està comentat?
+
+                    Perquè és un patró que expliquem als alumnes per mostrar
+                    on es personalitzen els colors foscos.
+
+                    Si no modifiquem res, Material3 genera automàticament:
+                    – colors foscos
+                    – contrast adequat
+                    – tipografia i superfícies adaptades
+                 -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- COLORS PRINCIPALS (DARK THEME) -->
+        <item name="colorPrimary">@color/md_theme_dark_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
+
+        <item name="colorSecondary">@color/md_theme_dark_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_dark_onSecondary</item>
+
+        <item name="android:colorBackground">@color/md_theme_dark_background</item>
+        <item name="colorOnBackground">@color/md_theme_dark_onBackground</item>
+
+        <item name="colorSurface">@color/md_theme_dark_surface</item>
+        <item name="colorOnSurface">@color/md_theme_dark_onSurface</item>
+
+        <!-- STATUS BAR I NAVIGATION BAR -->
+        <item name="android:statusBarColor">@color/md_theme_dark_background</item>
+        <item name="android:navigationBarColor">@color/md_theme_dark_background</item>
+
+        <!-- ICONES CLARES PER FONS FOSC -->
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+
+    </style>
+
+</resources>
